@@ -1,0 +1,85 @@
+
+
+body {
+  text-align: center;
+  background-image: url(create\ a\ background\ image\ for\ the\ random\ background\ color\ game.jpg);
+  
+}
+
+.fancy-heading {
+  font-family: 'Montserrat', 'Segoe UI', Arial, sans-serif;
+  font-size: 3rem;
+  font-weight: 900;
+  background: linear-gradient(90deg, #ff6f61, #43e97b, #38f9d7, #fc70a1);
+  background-size: 200% 200%;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  text-shadow: 0 4px 24px rgba(60,60,160,.22);
+  padding: 20px 0;
+  text-align: center;
+  transition: background 0.5s;
+  cursor: pointer;
+}
+
+
+.color-displayer {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-top: 24px;
+}
+
+#color-box {
+  width: 760px;
+  height: 76px;
+  border-radius: 16px;
+  box-shadow: 0 3px 9px rgba(0,0,0,.12);
+  border: 3px solid #eee;
+}
+
+#rgb-value {
+  font-size: 1.45rem;
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 600;
+  background: #f1f1f1;
+  padding: 8px 18px;
+  border-radius: 14px;
+  color: #333;
+  letter-spacing: .7px;
+}
+
+.color-btn {
+  min-width: 140px;
+  min-height: 48px;
+  background: linear-gradient(90deg, #ff6f61, #ffaf7b, #43e97b, #38f9d7, #fc70a1);
+  background-size: 400% 400%;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 32px;
+  box-shadow: 0 3px 12px rgba(60,60,160,0.12);
+  transition: transform 0.18s cubic-bezier(.45,1.7,.6,.96), background-position 0.4s cubic-bezier(.25,.8,.25,1);
+  cursor: pointer;
+  outline: none;
+  padding: 0 36px;
+  animation: gradientMove 3s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% {background-position:0% 50%;}
+  50% {background-position:100% 50%;}
+  100% {background-position:0% 50%;}
+}
+
+.color-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 7px rgba(60,60,160,0.15);
+}
+
+/* Optional (for hover fun): */
+.color-btn:hover {
+  filter: brightness(1.15) saturate(1.2);
+  letter-spacing: 1px;
+}
